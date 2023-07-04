@@ -1,0 +1,155 @@
+/*body {
+  background-image: url(./assets/bg-mobile.jpg);
+  background-repeat: no-repeat;
+  background-position: top center;
+  background-size: cover;
+}
+
+/*background: color image repeat position/seze */
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+:root {
+  --text-color: black;
+  --bg-url: url(./assets/bg-mobile.png);
+  --stroke-color: rgba(255, 255, 255, 0.5);
+  --surface-color: rgba(125, 128, 129, 0.1);
+  --surface-color-hover: rgba(0, 0, 0, 0.2);
+  --switch-bg-url: url(./assets/moon-stars.svg);
+}
+
+.black {
+  --text-color: white;
+  --bg-url: url(./assets/bg-mobile-dark.png);
+  --stroke-color: rgba(0, 0, 0, 0.5);
+  --surface-color: rgba(0, 0, 0, 0.5);
+  --surface-color-hover: rgba(6, 156, 243, 0.726);
+  --switch-bg-url: url(./assets/sun.svg);
+}
+
+body {
+  background: var(--bg-url) no-repeat top center/ cover;
+}
+
+body * {
+  font-family: "Inter", sans-serif;
+  color: var(--text-color);
+}
+
+#container {
+  width: 360px;
+  margin: 56px auto 0px;
+}
+
+#profile {
+  text-align: center;
+  padding: 24px;
+}
+
+#profile img {
+  width: 112px;
+  margin: auto;
+}
+
+#profile p {
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 24px;
+  margin-top: 8px;
+}
+
+/*switch
+position: absolute = vai colocar o elemento sobre o outro
+z-index= sera o andar/camada do elemento
+*/
+#switch {
+  position: relative;
+  width: 64px;
+  margin: 16px auto;
+}
+
+#switch button {
+  width: 32px;
+  height: 32px;
+  background: white var(--switch-bg-url) no-repeat center;
+  border: 0;
+  border-radius: 50%;
+
+  position: absolute;
+  top: 50%;
+  left: 0;
+  z-index: 1;
+  transform: translateY(-50%);
+}
+
+.black #switch button {
+  right: 0;
+  left: initial;
+}
+
+#switch span {
+  display: block;
+  width: 64px;
+  height: 24px;
+  background: var(--surface-color);
+  border: 1px solid var(--stroke-color);
+  backdrop-filter: blur(4px);
+  -webkit-backdrop-filter: blur(4px);
+  border-radius: 9999px;
+}
+
+/*
+list style = remove bolinha q contem em lista desordenada
+display = conteudo da página
+flex direction = direção do item (só funciona junto com o display flex
+gap = espaçamento entre os itens
+align items = alinhamento dos itens
+justify content = orientação do item
+padding = preenchimento entre o elemento e o espaço dele
+webkit-backdrop-filter = compatibilidade de navegador
+text-decoration= decoração do texto ( linha do texto)
+font-weight=peso da fonte
+
+
+*/
+
+ul {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+ul li a {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 16px 24px;
+
+  background: var(--surface-color);
+  border: 1px solid var(--stroke-color);
+  border-radius: 8px;
+
+  backdrop-filter: blur(4px);
+  -webkit-backdrop-filter: blur(4px);
+  text-decoration: none;
+
+  font-weight: 500;
+
+  transition: background 2s;
+}
+
+ul li a:hover {
+  background: var(--surface-color-hover);
+  border: 1.5px solid var(--text-color);
+}
+
+footer {
+  padding: 24px 0;
+  text-align: center;
+  font-size: 14px;
+}
